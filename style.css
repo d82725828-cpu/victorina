@@ -1,0 +1,212 @@
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 550px;
+            background: white;
+            border-radius: 22px;
+            padding: 30px;
+            box-shadow: 0 15px 40px rgba(0,0,0,.2);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #999;
+            margin-bottom: 25px;
+        }
+
+        .screen {
+            display: none;
+        }
+
+        .screen.active {
+            display: block;
+        }
+
+        .start-content {
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        .big-icon {
+            font-size: 75px;
+            margin-bottom: 20px;
+        }
+
+        .start-content p {
+            color: #777;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .main-button {
+            width: 100%;
+            padding: 15px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 17px;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .main-button:hover {
+            background: #5265d4;
+            transform: translateY(-2px);
+        }
+
+        .quiz-info {
+            display: flex;
+            justify-content: space-between;
+            gap: 10px;
+            margin-bottom: 20px;
+            color: #777;
+            font-size: 14px;
+        }
+
+        .progress {
+            height: 9px;
+            background: #eee;
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 25px;
+        }
+
+        .progress-bar {
+            height: 100%;
+            width: 0%;
+            background: #667eea;
+            transition: width .3s;
+        }
+
+        .question {
+            font-size: 22px;
+            color: #333;
+            margin-bottom: 25px;
+            line-height: 1.4;
+        }
+
+        .answers {
+            display: grid;
+            gap: 12px;
+        }
+
+        .answer {
+            width: 100%;
+            padding: 16px;
+            border: 2px solid #eee;
+            border-radius: 12px;
+            background: white;
+            text-align: left;
+            font-size: 16px;
+            cursor: pointer;
+            transition: .2s;
+        }
+
+        .answer:hover:not(:disabled) {
+            border-color: #667eea;
+            background: #f5f6ff;
+        }
+
+        .answer.correct {
+            background: #d4edda;
+            border-color: #28a745;
+            color: #155724;
+        }
+
+        .answer.wrong {
+            background: #f8d7da;
+            border-color: #dc3545;
+            color: #721c24;
+        }
+
+        .answer:disabled {
+            cursor: default;
+        }
+
+        .feedback {
+            min-height: 30px;
+            margin-top: 18px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .next-button {
+            display: none;
+            margin-top: 15px;
+        }
+
+        .result {
+            text-align: center;
+        }
+
+        .result-icon {
+            font-size: 75px;
+            margin: 20px 0;
+        }
+
+        .score {
+            font-size: 55px;
+            color: #667eea;
+            font-weight: bold;
+            margin: 15px 0;
+        }
+
+        .result p {
+            color: #777;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+
+        .difficulty {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .difficulty button {
+            flex: 1;
+            padding: 12px 5px;
+            border: 2px solid #eee;
+            background: white;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .difficulty button.active {
+            background: #667eea;
+            color: white;
+            border-color: #667eea;
+        }
+
+        @media(max-width: 400px) {
+            .container {
+                padding: 20px;
+            }
+
+            .question {
+                font-size: 19px;
+            }
+        }

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Викторина | Quiz Master</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="container">
+
+        <h1>🧠 Quiz Master</h1>
+        <p class="subtitle">Проверь свои знания!</p>
+
+        <!-- Начальный экран -->
+        <section class="screen active" id="startScreen">
+
+            <div class="start-content">
+                <div class="big-icon">🎯</div>
+
+                <h2>Готов к викторине?</h2>
+
+                <p>
+                    Ответь на 10 вопросов, набери максимальное
+                    количество баллов и проверь свои знания!
+                </p>
+
+                <div class="difficulty">
+                    <button class="active" data-level="easy">Лёгкий</button>
+                    <button data-level="medium">Средний</button>
+                    <button data-level="hard">Сложный</button>
+                </div>
+
+                <button class="main-button" id="startButton">
+                    Начать игру 🚀
+                </button>
+            </div>
+
+        </section>
+
+        <!-- Игровой экран -->
+        <section class="screen" id="quizScreen">
+
+            <div class="quiz-info">
+                <span id="questionNumber">Вопрос 1/10</span>
+                <span id="scoreDisplay">⭐ 0 очков</span>
+                <span id="timer">⏱️ 20</span>
+            </div>
+
+            <div class="progress">
+                <div class="progress-bar" id="progressBar"></div>
+            </div>
+
+            <h2 class="question" id="question"></h2>
+
+            <div class="answers" id="answers"></div>
+
+            <div class="feedback" id="feedback"></div>
+
+            <button class="main-button next-button" id="nextButton">
+                Следующий вопрос →
+            </button>
+
+        </section>
+
+        <!-- Экран результатов -->
+        <section class="screen" id="resultScreen">
+
+            <div class="result">
+                <div class="result-icon" id="resultIcon">🏆</div>
+
+                <h2>Викторина завершена!</h2>
+
+                <div class="score" id="finalScore">0/10</div>
+
+                <p id="resultMessage"></p>
+
+                <button class="main-button" id="restartButton">
+                    🔄 Играть снова
+                </button>
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="app.js"></script>
+
+</body>
+</html>
